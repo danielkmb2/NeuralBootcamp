@@ -1,0 +1,6 @@
+*.pyc
+.idea*
+venv/*
+saved_models
+
+test.py

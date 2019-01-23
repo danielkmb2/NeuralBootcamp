@@ -1,0 +1,56 @@
+{
+  "data": {
+    "filename": "hardware.csv",
+    "x_cols": [
+      "vendor",
+      "myct",
+      "mmin",
+      "mmax",
+      "cach",
+      "chmin",
+      "chmax",
+      "prp"
+    ],
+    "y_cols": [
+      "erp"
+    ],
+    "cathegorical_cols": [
+      "vendor"
+    ],
+    "input_sequence_length": 0,
+    "input_mode": "one_to_many",
+    "output_mode": "many_to_one",
+    "train_test_split": 0.9
+  },
+  "training": {
+    "epochs": 300,
+    "batch_size": 16,
+    "allow_early_stop": false
+  },
+  "model": {
+    "loss": "mean_squared_error",
+    "optimizer": "adam",
+    "shuffle_training_data": true,
+    "validation_folds": 5,
+    "save_dir": "saved_models",
+    "model_id": "hardware",
+    "layers": [
+      {
+        "type": "dense",
+        "neurons": 37
+      },
+      {
+        "type": "dense",
+        "neurons": 30
+      },
+      {
+        "type": "dense",
+        "neurons": 30
+      },
+      {
+        "type": "dense",
+        "neurons": 1
+      }
+    ]
+  }
+}
